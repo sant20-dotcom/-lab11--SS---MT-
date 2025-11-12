@@ -13,7 +13,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(div(9, 3), 3.0)
         self.assertAlmostEqual(div(5, 2), 2.5)
 
-    def test_log_invalid_argument(self):  # 1 assertion
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             log(10, 0)
 
