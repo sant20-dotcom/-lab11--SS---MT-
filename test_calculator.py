@@ -1,3 +1,5 @@
+#https://github.com/sant20-dotcom/-lab11--SS---MT-
+
 import unittest
 from calculator import *
 
@@ -8,28 +10,28 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-1, 1), 0)
         self.assertAlmostEqual(add(1.2, 3.4), 4.6)
 
-    def test_sub(self):
-        self.assertEqual(sub(5, 3), 2)
-        self.assertEqual(sub(0, 5), -5)
-        self.assertAlmostEqual(sub(5.5, 2.2), 3.3)
+    def test_subract(self):
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(0, 5), -5)
+        self.assertAlmostEqual(subtract(5.5, 2.2), 3.3)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
             div(10, 0)
 
     def test_logarithm(self):
-        self.assertAlmostEqual(log(100, 10), 2)
-        self.assertAlmostEqual(log(math.e, math.e), 1)
+        self.assertAlmostEqual(logarithm(100, 10), 2)
+        self.assertAlmostEqual(logarithm(math.e, math.e), 1)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(100, 1)
+            logarithm(100, 1)
 
         with self.assertRaises(ValueError):
-            log(100, -5)
+            logarithm(100, -5)
 
         with self.assertRaises(ValueError):
-            log(-100, 10)
+            logarithm(-100, 10)
 
     def test_multiply(self):
         self.assertEqual(mul(2, 3), 6)
@@ -43,7 +45,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            log(10, 0)
+            logarithm(10, 0)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
