@@ -29,7 +29,7 @@ class TestCalculator(unittest.TestCase):
             log(100, -5)
 
         with self.assertRaises(ValueError):
-            log(-100, 10)
+            log(-100, 100)
 
     def test_multiply(self):
         self.assertEqual(mul(2, 3), 6)
